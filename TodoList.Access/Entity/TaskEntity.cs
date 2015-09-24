@@ -50,6 +50,36 @@ namespace TodoList.Access.Entity
                 Console.WriteLine(ex.Message);
                 return null;
             }
-        } 
+        }
+
+        public bool actionCreate(Task task)
+        {
+            var conn = new MySqlConnection(TaskDAO.StringConnection);
+
+            try
+            {
+                conn.Open();
+
+                var sql = "INSERT INTO tasks (title, description, created_at, user_id) VALUES (@title, @description, @created_at, @user_id)";
+
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@title", task.Title);
+                cmd.Parameters.AddWithValue("@description", task.Description);
+                cmd.Parameters.AddWithValue("@created_at", DateTime.Now);
+                cmd.Parameters.AddWithValue("@user_id", task.User.Id);
+
+                cmd.ExecuteNonQuery();
+
+                return true;
+            } catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

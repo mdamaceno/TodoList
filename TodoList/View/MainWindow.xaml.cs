@@ -30,7 +30,7 @@ namespace TodoList
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var viewModel = (MainWindowViewModel)DataContext;            
+            (DataContext as MainWindowViewModel).View = this;
         }
 
 

@@ -16,6 +16,13 @@
                 <DataGridTextColumn Header="Criado por" Binding="{Binding User.Name}" />
             </DataGrid.Columns>
         </DataGrid>
+        <Label x:Name="label" Content="Título" HorizontalAlignment="Left" Margin="19,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="19,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Label x:Name="label1" Content="Descrição" HorizontalAlignment="Left" Margin="19,79,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="68" Margin="19,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Text="{Binding Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="19,214,0,0" VerticalAlignment="Top" Width="179" ItemsSource="{Binding Users, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Name" SelectedItem="{Binding UserSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Label x:Name="label2" Content="Criado por" HorizontalAlignment="Left" Margin="19,183,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Adicionar" HorizontalAlignment="Left" Margin="19,257,0,0" VerticalAlignment="Top" Width="75" Command="{Binding InsertCommand}" />
 
     </Grid>
 </Window>
