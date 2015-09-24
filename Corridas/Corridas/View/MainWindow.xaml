@@ -1,0 +1,32 @@
+﻿<Window x:Class="Corridas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    <Grid>
+        <Button Content="Sair" HorizontalAlignment="Left" Margin="432,288,0,0" VerticalAlignment="Top" Width="75" Command="{Binding FecharCommand}"/>
+        <DataGrid x:Name="grdCorrida" HorizontalAlignment="Left" Margin="10,0,0,0" 
+                  VerticalAlignment="Top" Height="110" 
+                  Width="497" 
+                  ItemsSource="{Binding Corridas}" 
+                  SelectedItem="{Binding CorridaSelecionada}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nome Corrida" Binding="{Binding Nome}" />
+                <DataGridTextColumn Header="Data Corrida" Binding="{Binding DataCorrida}" />
+                <DataGridTextColumn Header="Distâcia" Binding="{Binding Distancia}" />
+                <DataGridTextColumn Header="Local" Binding="{Binding Local.Cidade_Uf}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Excluir" HorizontalAlignment="Left" Margin="10,125,0,0" 
+                VerticalAlignment="Top" Width="76" Command="{Binding ExcluirCommand}"/>
+        <Button Content="Incluir" HorizontalAlignment="Left" Margin="140,282,0,0" VerticalAlignment="Top" Width="75" Command="{Binding IncluirCommand}"/>
+        <Label Content="Nome&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,152,0,0" VerticalAlignment="Top" Height="26"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="15,178,0,0" TextWrapping="Wrap" Text="{Binding Nome, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Data&#xA;" HorizontalAlignment="Left" Margin="10,206,0,0" VerticalAlignment="Top" Height="26"/>
+        <DatePicker HorizontalAlignment="Left" Margin="15,232,0,0" VerticalAlignment="Top" Width="120" SelectedDate="{Binding Data, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Label Content="Distancia&#xA;" HorizontalAlignment="Left" Margin="10,256,0,0" VerticalAlignment="Top" Height="26"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="15,282,0,0" TextWrapping="Wrap" Text="{Binding Distancia, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" Margin="140,234,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Local, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Cidade_Uf" SelectedItem="{Binding LocalSelecionado, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Content="Editar" HorizontalAlignment="Left" Margin="91,125,0,0" VerticalAlignment="Top" Width="75" Command="{Binding EditarCommand}"/>
+
+    </Grid>
+</Window>

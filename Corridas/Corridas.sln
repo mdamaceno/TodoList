@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corridas", "Corridas\Corridas.csproj", "{776897E4-742C-4AE7-A5A9-DA57BC8F443F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corridas.Access", "Corridas.Access\Corridas.Access.csproj", "{DDA34F36-976C-49A5-96C9-EA58B59BC5CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{776897E4-742C-4AE7-A5A9-DA57BC8F443F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{776897E4-742C-4AE7-A5A9-DA57BC8F443F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{776897E4-742C-4AE7-A5A9-DA57BC8F443F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{776897E4-742C-4AE7-A5A9-DA57BC8F443F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDA34F36-976C-49A5-96C9-EA58B59BC5CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA34F36-976C-49A5-96C9-EA58B59BC5CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA34F36-976C-49A5-96C9-EA58B59BC5CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA34F36-976C-49A5-96C9-EA58B59BC5CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

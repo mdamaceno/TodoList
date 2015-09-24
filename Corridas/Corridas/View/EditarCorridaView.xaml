@@ -1,0 +1,13 @@
+﻿<Window x:Class="Corridas.View.EditarCorridaView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="EditarCorridaView" Height="300" Width="300">
+    <Grid>
+        <Label Content="Nome" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.953,0.104" Height="29"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="16,39,0,0" TextWrapping="Wrap" Text="{Binding Nome, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="207,238,0,0" VerticalAlignment="Top" Width="75" Command="{Binding CancelarCommand}"/>
+        <Button Content="Salvar" HorizontalAlignment="Left" Margin="127,238,0,0" VerticalAlignment="Top" Width="75" Command="{Binding SalvarCommand}"/>
+        <ComboBox HorizontalAlignment="Left" Margin="16,84,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Locais}" DisplayMemberPath="Cidade_Uf" SelectedItem="{Binding LocalSelecionado, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+    </Grid>
+</Window>
